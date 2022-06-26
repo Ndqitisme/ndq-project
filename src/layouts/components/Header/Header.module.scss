@@ -1,0 +1,131 @@
+.wrapper {
+    width: 100%;
+    height: var(--default-layout-header-height);
+    background-color: var(--white-color);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
+
+    display: flex;
+    justify-content: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.inner {
+    padding: var(--defautl-layout-horizontal-spacer);
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main,
+.action,
+.search {
+    display: flex;
+    flex: 1 1;
+    align-items: center;
+}
+
+// SCSS Main
+.main {
+    .link-home {
+        display: flex;
+        align-items: center;
+        cursor: default;
+    }
+
+    .logo {
+        border-radius: 10px;
+        width: 44px;
+        cursor: pointer;
+    }
+
+    .title {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0 15px;
+        transition: all 1s linear;
+    }
+}
+
+//SCSS Action
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.wrapper-login,
+.wrapper-unlogin {
+    display: flex;
+    align-items: center;
+}
+
+.action-btn {
+    display: flex;
+    color: #161823;
+    background-color: transparent;
+
+    padding: 4px 16px;
+    cursor: pointer;
+
+    svg {
+        transition: all 0.2s ease;
+    }
+
+    &:hover {
+        color: var(--primary-color);
+    }
+
+    &.active {
+        color: var(--primary-color-dark);
+    }
+}
+
+.action-btn-bell {
+    animation: bell-waver 1.2s infinite linear;
+
+    @keyframes bell-waver {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(20deg);
+        }
+        50% {
+            transform: rotate(0deg);
+        }
+        75% {
+            transform: rotate(-20deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.avatar-user {
+    width: 34px;
+    height: 34px;
+    margin: 0 8px 0 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.more-btn {
+    background: transparent;
+    border: none;
+    min-width: 26px;
+    font-size: 2.6rem;
+    margin-left: 14px;
+    padding: 12px 4px 12px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

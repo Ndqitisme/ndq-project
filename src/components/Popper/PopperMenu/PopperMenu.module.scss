@@ -1,0 +1,103 @@
+.menu-list {
+    width: 342px;
+
+    .menu-item {
+        margin-left: 0;
+        color: var(--black-color);
+        font-weight: 500;
+    }
+
+    a {
+        color: var(--text-color);
+    }
+}
+
+.wrapper-menu {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 8px;
+}
+
+.wrapper-item {
+    overflow-y: auto;
+}
+
+.menu-item {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 0;
+    padding: 10px 16px;
+    line-height: 1.8rem;
+
+    &.noIcon {
+        padding-left: 32px;
+    }
+
+    &.separate {
+        padding-top: 14px;
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+
+    &:hover svg {
+        animation: moveUpDown 1s linear infinite;
+    }
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &.spinHover:hover svg {
+        animation: spin 1.2s linear infinite;
+    }
+
+    &.waverReverseHover:hover svg {
+        animation: waveReverse 2.4s linear infinite;
+    }
+}
+
+//Animation
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(1px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(-1px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes waveReverse {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-55deg);
+    }
+    50% {
+        transform: rotate(-110deg);
+    }
+    75% {
+        transform: rotate(-55deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
