@@ -1,0 +1,23 @@
+.wrapper {
+    text-align: center;
+    margin: 32px auto;
+}
+
+.content {
+    font-weight: 600;
+    font-size: 3.2rem;
+    color: rgb(59, 59, 59);
+}
+
+.content-1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: rgb(121, 121, 121);
+}
+
+.comeback-home {
+    font-size: 2.6rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    cursor: pointer;
+}
