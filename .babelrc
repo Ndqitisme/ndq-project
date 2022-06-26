@@ -1,0 +1,13 @@
+//Config Babel: Cấu Hình Babel RC
+{
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "~": "./src"
+                }
+            }
+        ]
+    ]
+}
